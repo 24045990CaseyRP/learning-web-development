@@ -1,0 +1,108 @@
+:root {
+    --primary: #6366f1; /* Modern Indigo */
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+    --bg-gradient: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    --glass: rgba(255, 255, 255, 0.7);
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-gradient);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 10%;
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo { font-weight: 700; font-size: 1.5rem; color: var(--primary); }
+.nav-links a { text-decoration: none; color: var(--text-main); margin-left: 20px; font-weight: 500; }
+
+/* Hero Section */
+.hero {
+    padding: 100px 0 60px;
+    text-align: center;
+}
+
+.gradient-text {
+    font-size: 3rem;
+    background: linear-gradient(to right, #6366f1, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+/* Grid Cards */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.card:hover { transform: translateY(-10px); }
+
+.card-img { width: 100%; height: 180px; object-fit: cover; }
+
+.card-content { padding: 20px; }
+
+/* Glassmorphism Profile */
+.glass {
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 40px;
+    border-radius: 24px;
+    margin: 60px 0;
+    text-align: center;
+}
+
+/* Badges for Hobbies */
+.hobbies-flex {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 80px;
+}
+
+.badge {
+    background: white;
+    padding: 8px 20px;
+    border-radius: 100px;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid #e5e7eb;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
